@@ -59,7 +59,7 @@ def insert():
     identity = request.form.get("identity")
 
     value = (id, name, age, home, identity)
-    insert_sql = '''INSERT INTO list(id,name, age,home,gender,identity) values (%s,%s,%s,%s,%s)'''
+    insert_sql = '''INSERT INTO list(id,name, age,home,identity) values (%s,%s,%s,%s,%s)'''
     cursor = get_cursor()  # 打开数据库
     cursor.execute(insert_sql, value)  # 执行sql语句
     msg="添加成功！"
